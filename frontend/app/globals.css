@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --cyber-blue: #00f6ff;
+    --cyber-purple: #7b2ff7;
+    --cyber-pink: #f72f7b;
+  }
+
+  body {
+    @apply bg-black text-white;
+    background-image: radial-gradient(circle at center, rgba(123, 47, 247, 0.1) 0%, transparent 70%);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-cyber-blue/30 rounded-full hover:bg-cyber-blue/50 transition-colors;
+  }
+}
+
+@layer components {
+  .cyber-button {
+    @apply relative overflow-hidden bg-gradient-to-r from-cyber-blue to-cyber-purple text-white font-bold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity;
+  }
+
+  .cyber-button::after {
+    content: '';
+    @apply absolute inset-0 bg-white opacity-0 transition-opacity;
+  }
+
+  .cyber-button:hover::after {
+    @apply opacity-10;
+  }
+
+  .cyber-input {
+    @apply w-full bg-black/50 border border-cyber-blue/30 rounded-lg px-4 py-3 focus:border-cyber-blue/60 outline-none text-white placeholder-gray-500;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px var(--cyber-blue),
+                 0 0 20px var(--cyber-blue),
+                 0 0 30px var(--cyber-blue);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Terminal cursor animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Scanline effect */
+.scanline {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) 10%,
+    transparent 100%
+  );
+  animation: scanline 8s linear infinite;
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+} 
