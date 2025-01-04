@@ -4,7 +4,7 @@
   </a>
 </div>
 <p align="center">
-  <em>Open-Source AI Agent Research Platform</em>
+  <em>Open-Source AI Agent Scientific Research Platform</em>
 </p>
 
 <p align="center">
