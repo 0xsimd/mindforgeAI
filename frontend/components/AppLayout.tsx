@@ -159,22 +159,11 @@ export default function AppLayout({ children }: AppLayoutProps) {
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
                 >
-                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M3 12h4l2-8 4 16 2-8h6"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M2 17h20M2 7h20"
-                      stroke="currentColor"
-                      strokeWidth="1"
-                      strokeLinecap="round"
-                      strokeOpacity="0.3"
-                    />
-                  </svg>
+                  <img
+                    src="https://iili.io/2UBgdjn.png"
+                    alt="Pump.fun"
+                    className="w-5 h-5"
+                  />
                   <span className="hidden lg:inline">Pump.fun</span>
                 </a>
               </div>
@@ -277,22 +266,11 @@ export default function AppLayout({ children }: AppLayoutProps) {
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
               >
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M3 12h4l2-8 4 16 2-8h6"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M2 17h20M2 7h20"
-                    stroke="currentColor"
-                    strokeWidth="1"
-                    strokeLinecap="round"
-                    strokeOpacity="0.3"
-                  />
-                </svg>
+                <img
+                  src="https://iili.io/2UBgdjn.png"
+                  alt="Pump.fun"
+                  className="w-5 h-5"
+                />
                 <span>Pump.fun</span>
               </a>
             </div>
